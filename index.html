@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Expense Tracker</title>
+</head>
+<body>
+    <h1>Team Expense Tracker</h1>
+
+    <div class="expenseTable">
+        <div class="field-row">
+            <input type="text" id="memberInput" placeholder="Enter member name">
+            <button id="addMemberBtn">Add Member</button>
+        </div>
+
+        <div class="field-row">
+            <label for="memberSelect">Assign expense to:</label>
+            <select id="memberSelect">
+                <option value="">Choose a member</option>
+            </select>
+        </div>
+
+        <div class="field-row">
+            <input type="number" id="mealInput" placeholder="Meal price" step="0.01" min="0">
+            <button id="addMealBtn">Add Meal</button>
+        </div>
+
+        <div class="field-row">
+            <input type="number" id="transportInput" placeholder="Transport price" step="0.01" min="0">
+            <button id="addTransportBtn">Add Transport</button>
+        </div>
+    </div>
+
+    <h2>Team Expense Summary</h2>
+    <div class="table-container">
+        <table class="btable">
+            <thead>
+                <tr>
+                    <th>Member Name</th>
+                    <th>Meal Cost</th>
+                    <th>Transport Cost</th>
+                    <th>Total Expense</th>
+                </tr>
+            </thead>
+            <tbody id="expenseTableBody"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Team Expense</td>
+                    <td id="totalExpense">$0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</body>
+</html>
